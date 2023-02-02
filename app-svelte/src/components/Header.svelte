@@ -1,5 +1,5 @@
 <script>
-    export let text = "Button"
+    export let text = "Header"
 </script>
   
 <button>{text}</button>
