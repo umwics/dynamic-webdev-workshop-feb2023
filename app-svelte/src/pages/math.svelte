@@ -59,7 +59,7 @@
 
 <div id="mathWorkspace" class="appPage">
     <Guide instructions="Try to reach a score of 5!">
-        Lesson description. Reactive states or Refs are ilot
+        Variables that react to change (known as <b>states</b> or <b>refs</b>) are what makes dynamic apps efficient to work with!
     </Guide>
     <div id="problems">
         <div id="scores">

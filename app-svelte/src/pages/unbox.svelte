@@ -21,11 +21,8 @@
 </script>
 
 <div id="weatherWorkspace" class="appPage">
-    <Guide 
-        done={done}
-        instructions="Put anything inside the box (hint: you must edit the code for this page)"
-    >
-        Lesson description
+    <Guide instructions="Put anything inside the box (hint: you must edit the code for this page)">
+        You can put something inside something an easy way while maintain how they both look!
     </Guide>
     <Box>
         <!-- Put something inside -->Hi
