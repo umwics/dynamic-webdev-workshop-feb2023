@@ -1,1 +1,0 @@
-<!-- Homepage or /egg route -->

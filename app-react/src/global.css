@@ -1,0 +1,70 @@
+#header{
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleSet{
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    height: 3.5em;
+    width: max-content;
+    padding-left: 1vw;
+}
+
+#title{
+    padding-left: 1vw;
+    color: var(--red);
+    display: flex;
+    flex-direction: column;
+}
+
+#navs{
+    align-self: flex-end;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 3%;
+    font-weight: 800;
+}
+
+.navActive{
+    text-decoration: underline;
+}
+
+#mathWorkspace{
+    background: beige;
+}
+
+#problems, #scores{
+    display: flex;
+    flex-direction: column;
+}
+
+.palette{
+    background: #F6B4C4;
+    padding: 2em;
+    margin: 2em;
+    max-width: 15vw;
+}
+
+.swatches{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.swatch{
+    height: 7em;
+    width: 7em;
+    margin: 0.5em;
+    font-size: 60%;
+    text-align: center;
+}
+
+.swatch:hover{
+    cursor: pointer;
+}
