@@ -1,5 +1,6 @@
 <script>
-  import Button from "./components/Header.svelte"
+  import { Router } from "@roxi/routify";
+  import { routes } from "../.routify/routes";
 </script>
 
-<Button text="Connected from Svelte!" />
+<Router {routes} />

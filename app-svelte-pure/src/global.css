@@ -1,0 +1,9 @@
+html, body {
+	margin: 0;
+  	padding: 0;
+  	height: 100vh;
+  	width: 100vw;
+	background: url(https://ipfs.fleek.co/ipfs/bafybeie4x6y5bdzyw3zh32b3774r2dth2ystplugtbptppvlluj55w6l5e);
+	overflow-x: hidden;
+	scrollbar-width: 0.5em;
+}
