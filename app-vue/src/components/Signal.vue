@@ -19,21 +19,3 @@
         {{on}}
     </div>
 </template>
-
-<style scoped>
-    .signal{
-        width: 2em;
-        height: 2em;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    .off{
-        color: var(--red);
-        background: var(--red);
-    }
-    .on{
-        color: mediumseagreen;
-        background: mediumseagreen;
-    }
-</style>

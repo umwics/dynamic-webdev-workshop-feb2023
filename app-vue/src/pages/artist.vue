@@ -20,9 +20,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    #palettes{
-        display: flex;
-    }
-</style>

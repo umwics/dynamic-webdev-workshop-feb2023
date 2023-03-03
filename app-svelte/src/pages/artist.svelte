@@ -16,9 +16,3 @@
         <CodeBox />
     </div>
 </div>
-
-<style>
-    #palettes{
-        display: flex;
-    }
-</style>

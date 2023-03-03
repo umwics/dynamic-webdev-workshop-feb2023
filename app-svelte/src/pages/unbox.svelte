@@ -17,7 +17,7 @@
 	})
 </script>
 
-<div id="weatherWorkspace" class="appPage">
+<div id="unboxWorkspace" class="appPage">
     <Guide instructions="Put anything inside the box (hint: you must edit the code for this page)">
         You can put something inside something an easy way while maintain how they both look!
     </Guide>
@@ -25,10 +25,3 @@
         <!-- Put something inside -->
     </Box>
 </div>
-
-<style>
-    #weatherWorkspace{
-        height: 100%;
-        width: 100%;
-    }
-</style>

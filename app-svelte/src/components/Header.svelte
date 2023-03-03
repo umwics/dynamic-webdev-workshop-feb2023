@@ -1,8 +1,3 @@
-<!-- 
-    Header.svelte
-        Will update later
--->
-
 <script>
     import { onMount } from "svelte"
     import Signal from "./Signal.svelte" 
@@ -55,43 +50,3 @@
         Winnipeg Brrr it's cold today
     </div>
 </div>
-
-<style>
-    #header{
-        height: 11vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .titleSet{
-        display: flex;
-        align-items: center;
-    }
-
-    #logo{
-        height: 3.5em;
-        width: max-content;
-        padding-left: 1vw;
-    }
-
-    #title{
-        padding-left: 1vw;
-        color: var(--red);
-        display: flex;
-        flex-direction: column;
-    }
-
-    #navs{
-        align-self: flex-end;
-        width: 50vw;
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-column-gap: 3%;
-        font-weight: 800;
-    }
-
-    .navActive{
-        text-decoration: underline;
-    }
-</style>

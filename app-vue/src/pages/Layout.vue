@@ -12,11 +12,3 @@
         <Footer />
     </section>
 </template>
-
-<style scoped>
-    #layout{
-        height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-</style>

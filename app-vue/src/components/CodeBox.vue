@@ -20,13 +20,3 @@
         <code>{{bodyCode}}</code>
     </div>
 </template>
-
-<style scoped>
-    #codebox{
-        background-color: slategray;
-        color: white;
-        padding: 1.5em;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>

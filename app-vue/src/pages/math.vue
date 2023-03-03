@@ -78,14 +78,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    #mathWorkspace{
-        background: beige;
-    }
-
-    #problems, #scores{
-        display: flex;
-        flex-direction: column;
-    }
-</style>

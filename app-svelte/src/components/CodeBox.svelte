@@ -15,13 +15,3 @@
     <code>{headerCode}</code>
     <code>{bodyCode}</code>
 </div>
-
-<style>
-    #codebox{
-        background-color: slategray;
-        color: white;
-        padding: 1.5em;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>

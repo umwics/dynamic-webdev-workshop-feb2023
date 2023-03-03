@@ -1,4 +1,3 @@
-<!-- routify:options preload="proximity" -->
 <script>
     import { onMount } from "svelte"
     import Header from "../components/Header.svelte"
@@ -18,11 +17,3 @@
     <slot />
     <Footer />
 </section>
-
-<style>
-    #layout{
-        height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-</style>

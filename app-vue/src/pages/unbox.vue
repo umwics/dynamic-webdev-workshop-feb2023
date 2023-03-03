@@ -1,6 +1,6 @@
 <script setup>
     import Box from "../components/Box.vue"
-    import Guide from "../components/Box.vue"
+    import Guide from "../components/Guide.vue"
     import { onMounted } from "vue"
     import { useStore } from "../stores"
     const store = useStore()
@@ -29,10 +29,3 @@
         </Box>
     </div>
 </template>
-
-<style scoped>
-    #unboxWorkspace{
-        height: 100%;
-        width: 100%;
-    }
-</style>

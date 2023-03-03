@@ -19,7 +19,7 @@ export default function Unbox() {
 	})*/
     
     return (
-        <div id="weatherWorkspace" className="appPage">
+        <div id="unboxWorkspace" className="appPage">
             <Guide instructions="Put anything inside the box (hint: you must edit the code for this page)">
                 Lesson description
             </Guide>

@@ -1,4 +1,3 @@
-<!-- Displays a palette -->
 <script>
     import { bgColor, headerClass, q2Complete } from "../stores"
     export let title = ""
@@ -28,29 +27,3 @@
         {/each}
     </div>
 </div>
-
-<style>
-    .palette{
-        background: #F6B4C4;
-        padding: 2em;
-        margin: 2em;
-        max-width: 15vw;
-    }
-
-    .swatches{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .swatch{
-        height: 7em;
-        width: 7em;
-        margin: 0.5em;
-        font-size: 60%;
-        text-align: center;
-    }
-
-    .swatch:hover{
-        cursor: pointer;
-    }
-</style>

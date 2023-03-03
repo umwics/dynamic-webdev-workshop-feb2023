@@ -44,17 +44,3 @@
     </div>
     {message}
 </div>
-
-<style>
-    #homePage{
-        padding: 6vh 0 6vh 0;
-        grid-template-columns: 30% 50%;
-        grid-column-gap: 10%;
-    }
-
-    #theEgg{
-        height: 8em;
-        width: max-content;
-        cursor: pointer;
-    }
-</style>

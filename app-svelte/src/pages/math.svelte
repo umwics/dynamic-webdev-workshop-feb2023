@@ -71,14 +71,3 @@
         {currEq.oper1} + {currEq.oper2} = <input id="answer" on:keydown={checkAnswerKP} on:blur={checkAnswer}>
     </div>
 </div>
-
-<style>
-    #mathWorkspace{
-        background: beige;
-    }
-
-    #problems, #scores{
-        display: flex;
-        flex-direction: column;
-    }
-</style>
