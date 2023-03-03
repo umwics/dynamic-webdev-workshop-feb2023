@@ -1,5 +1,7 @@
 <script setup>
-    export let instructions = ""
+    const props = defineProps({ 
+        instructions: {type: String, required: false, default: ""}
+    })
 </script>
 
 <template>
@@ -8,7 +10,7 @@
             <slot />
         </div>
         <div id="instructions">
-            {instructions}
+            {{instructions}}
         </div>
     </div>
 </template>

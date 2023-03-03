@@ -4,18 +4,15 @@
     import Box from "../components/Box.svelte"
     import Guide from "../components/Guide.svelte"
 
-    let done = false
     // Check if there's something inside the Box
     onMount(() => { 
 		let box = document.getElementById("box")
         if(box.innerHTML.length > 0){
             console.log("There's something in the box!")
             q3Complete.set(true)
-            done = true
         } 
         else { 
             q3Complete.set(false)
-            done = false 
         }
 	})
 </script>
@@ -25,7 +22,7 @@
         You can put something inside something an easy way while maintain how they both look!
     </Guide>
     <Box>
-        <!-- Put something inside -->Hi
+        <!-- Put something inside -->
     </Box>
 </div>
 

@@ -1,6 +1,6 @@
 <script setup>
     import Guide from "../components/Guide.vue"
-    import CodeBox from "../components/CodeBox.vue
+    import CodeBox from "../components/CodeBox.vue"
     import Palette from "../components/Palette.vue"
 </script>
 
@@ -13,8 +13,8 @@
         </Guide>
         <div id="paletteView">
             <div id="palettes">
-                <Palette title="Header" patterns={["pinkcrystal","slateleaves","goldswirls","flowers"]} />
-                <Palette title="Body" colors={["lightcyan","beige","whitesmoke","lightgrey"]} />
+                <Palette title="Header" :patterns='["pinkcrystal","slateleaves","goldswirls","flowers"]' />
+                <Palette title="Body" :colors='["lightcyan","beige","whitesmoke","lightgrey"]' />
             </div>
             <CodeBox />
         </div>

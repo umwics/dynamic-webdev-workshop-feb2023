@@ -1,18 +1,22 @@
 <script setup>
-    export let on = false
+    import { computed } from "vue"
+    const props = defineProps({ 
+        on: {type: Boolean, required: false, default: false},
+    })
 
-    let currSignal = on
-    let signalClass = "off"
+    // Store ref for currSignal?
+    // Reloads at (on != currSignal)
+    const signalClass = computed(() => {
+        if(on)
+            return "on"
+        return "off"
+    })
 
-    $: if (on != currSignal){
-        if(on) {signalClass = "on"}
-        else {signalClass = "off"}
-    }
 </script>
 
 <template>
-    <div class="signal {signalClass}">
-        {on}
+    <div :class="'signal ' + signalClass">
+        {{on}}
     </div>
 </template>
 

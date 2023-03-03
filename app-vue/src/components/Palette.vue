@@ -1,14 +1,21 @@
 <script setup>
-    import { bgColor, headerClass, q2Complete } from "../stores"
-    export let title = ""
-    export let colors = []
-    export let patterns = []
+    import { storeToRefs } from "pinia"
+    import { useStore } from "../stores"
+    const store = useStore()
+    const { setHeaderClass, setBgColor, setQ2 } = store
+    const { bgColor, headerClass } = storeToRefs(store)
+
+    const props = defineProps({ 
+        title: {type: String, required: false, default: ""},
+        colors: {type: String, required: false, default: []},
+        patterns: {type: String, required: false, default: []}
+    })
 
     function update(){
-        if(title == "Header"){ headerClass.set(this.innerText) }
-        if(title == "Body"){ bgColor.set(this.innerText) }
+        if(title == "Header"){ setHeaderClass(this.innerText) }
+        if(title == "Body"){ setBgColor(this.innerText) }
 
-        if($headerClass != "pinkcrystal" && $bgColor != "whitesmoke"){ q2Complete.set(true) }
+        if(headerClass != "pinkcrystal" && bgColor != "whitesmoke"){ setQ2(true) }
     }
 </script>
 
@@ -16,16 +23,12 @@
     <div class="palette">
         <h2> {title} Palette </h2>
         <div class="swatches">
-            {#each colors as color}
-                <button class="swatch" style="background:{color};" on:click={update}>
-                    {color}
-                </button>
-            {/each}
-            {#each patterns as pattern}
-                <button class="swatch {pattern}" on:click={update}>
-                    {pattern}
-                </button>
-            {/each}
+            <button v-for="color in colors" :style="`background:${color};`" @click="update">
+                {{color}}
+            </button>
+            <button v-for="pattern in patterns" :class="'swatch ' + pattern" @click="update">
+                {{pattern}}
+            </button>
         </div>
     </div>
 </template>

@@ -1,20 +1,23 @@
 <script setup>
-    import { bgColor, headerClass } from "../stores"
+    import { computed } from "vue"
+    import { storeToRefs } from "pinia"
+    import { useStore } from "../stores"
+    const store = useStore()
+    const { bgColor, headerClass } = storeToRefs(store)
     
-    let bodyCode, headerCode
-    headerClass.subscribe(hClass => {
-        headerCode = `<Header backgroundClass="${hClass}" />`
+    const headerCode = computed(() => {
+        return `<Header backgroundClass="${headerClass}" />`
     })
-    bgColor.subscribe(bCol => {
-        bodyCode = `document.body.styles="${bCol}"`
+    const bodyCode = computed(() => {
+        return `document.body.styles="${bgColor}"`
     })
     
 </script>
 
 <template>
     <div id="codebox">
-        <code>{headerCode}</code>
-        <code>{bodyCode}</code>
+        <code>{{headerCode}}</code>
+        <code>{{bodyCode}}</code>
     </div>
 </template>
 

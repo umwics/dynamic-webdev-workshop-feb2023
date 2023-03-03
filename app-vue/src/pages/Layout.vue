@@ -1,15 +1,17 @@
 <script setup>
     import Header from "../components/Header.vue"
     import Footer from "../components/Footer.vue"
-    //import { bgColor, headerClass } from "../stores"
+    
     //bgColor.subscribe(color => { document.body.style.background = color })
 </script>
 
-<section id="layout">
-    <Header backgroundClass="flowers" />
-    <slot />
-    <Footer />
-</section>
+<template>
+    <section id="layout">
+        <Header backgroundClass="flowers" />
+            <router-view></router-view>
+        <Footer />
+    </section>
+</template>
 
 <style scoped>
     #layout{
