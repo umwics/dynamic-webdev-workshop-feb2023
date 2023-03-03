@@ -4,10 +4,6 @@ An intro to dynamic frameworks such as React, Vue, Svelte that make modern web a
 
 Learn the basics of NodeJS, reactive states, components, and state management with live samples in this Github repository!
 
-### Presentation slides
-
-Slide deck coming soon!
-
 
 ### Demo app
 
@@ -49,14 +45,5 @@ Explore the framework-specific source codes
 
 4. Run the app!  
     ```
-    // For React
-    $ npm start
-
-    // For Vue and Svelte
     $ npm run dev
     ```  
-
-
-## FAQ
-
-FAQ coming soon!

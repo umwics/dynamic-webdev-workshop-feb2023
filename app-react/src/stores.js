@@ -15,8 +15,8 @@ const setQ1 = atom({
     key: 'setQ1',
     default: false,
 });
-const q1 = selector({
-    key: 'q1',
+const q1Complete = selector({
+    key: 'q1Complete',
     get: ({ get }) => get(setQ1),
 });
 // setQ2: boolean - finished Q2
@@ -24,8 +24,8 @@ const setQ2 = atom({
     key: 'setQ2',
     default: false,
 });
-const q2 = selector({
-    key: 'q2',
+const q2Complete = selector({
+    key: 'q2Complete',
     get: ({ get }) => get(setQ2),
 });
 // setQ3: boolean - finished Q3
@@ -33,8 +33,8 @@ const setQ3 = atom({
     key: 'setQ3',
     default: false,
 });
-const q3 = selector({
-    key: 'q3',
+const q3Complete = selector({
+    key: 'q3Complete',
     get: ({ get }) => get(setQ3),
 });
 // setQ4: boolean - finished Q4
@@ -42,8 +42,8 @@ const setQ4 = atom({
     key: 'setQ4',
     default: false,
 });
-const q4 = selector({
-    key: 'q4',
+const q4Complete = selector({
+    key: 'q4Complete',
     get: ({ get }) => get(setQ1),
 });
 
@@ -92,10 +92,10 @@ const headerClass = selector({
 
 export { 
     setHatchStage, hatchStage,
-    setQ1, q1,
-    setQ2, q2,
-    setQ3, q3,
-    setQ4, q4,
+    setQ1, q1Complete,
+    setQ2, q2Complete,
+    setQ3, q3Complete,
+    setQ4, q4Complete,
     setCorrect, correct,
     setWrong, wrong,
     setBgColor, bgColor,

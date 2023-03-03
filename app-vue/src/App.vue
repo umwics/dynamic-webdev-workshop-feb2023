@@ -1,7 +1,7 @@
 <script setup>
-    import Button from "./components/Button.vue"
+    import Layout from "./pages/Layout.vue"
 </script>
 
 <template>
-    <Button text="Connected from Vue!" />
+    <Layout />
 </template>

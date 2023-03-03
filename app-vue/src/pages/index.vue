@@ -4,21 +4,21 @@
 -->
 
 <script setup>
-    import { hatchStage, q1Complete, q2Complete, q3Complete, q4Complete } from "../stores"
+    //import { hatchStage, q1Complete, q2Complete, q3Complete, q4Complete } from "../stores"
     import eggImg from "../public/egg0.png"
 
     // Calculate how close our egg is to hatching!
     function breakEgg(){
-        let progress = 0
+        /*let progress = 0
         if($q1Complete){ progress++ }
         if($q2Complete){ progress++ }
         if($q3Complete){ progress+=2 }
         if($q4Complete){ progress++ } // Skip 4th quest for now, out of time :P
-        hatchStage.set(progress)
+        hatchStage.set(progress)*/
     }
 
     let message = ""
-    $: switch($hatchStage) {
+    /*$: switch($hatchStage) {
         case 0:
             message = "The egg didn't budge. Go on an adventure until you are strong enough to break the egg!"
             break;
@@ -34,14 +34,14 @@
         case 4:
             message = "You have freed the Trophy Chicken!"
             break;
-    }
+    }*/
 
 </script>
 
 <template>
     <div id="homePage" class="appPage">
-        <div id="theEgg" on:click={breakEgg} on:keypress={breakEgg}>
-            <img src={eggImg} class={"egg" + $hatchStage} alt="Egg is on hatch stage {$hatchStage}" style="height:100%;width:100%;">
+        <div id="theEgg" onClick={breakEgg} onKeypress={breakEgg}>
+            <img src={eggImg} class="egg0" alt="Egg is on hatch stage 0" style="height:100%;width:100%;">
         </div>
         {message}
     </div>

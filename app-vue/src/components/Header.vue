@@ -1,14 +1,41 @@
-<script setup>
-    import Signal from "./Signal.vue" 
+<script>
+    //import Signal from "./Signal.vue" 
     import eggImg from "../public/egg0.png"
-    import { hatchStage, q1Complete, q2Complete, q3Complete } from "../stores"
+    import Home from "../pages/Index.vue"
+    /*import Artist from "../pages/Artist.vue"
+    import Math from "../pages/Math.vue"
+    import Unbox from "../pages/Unbox.vue"*/
+    
+
+    const routes = {
+        '/': Home
+    }
+
+    export default {
+    data() {
+        return {
+        currentPath: window.location.hash
+        }
+    },
+    computed: {
+        currentView() {
+        return routes[this.currentPath.slice(1) || '/'] || NotFound
+        }
+    },
+    mounted() {
+        window.addEventListener('hashchange', () => {
+            this.currentPath = window.location.hash
+            })
+    }
+    }
+    /*import { hatchStage, q1Complete, q2Complete, q3Complete } from "../stores"
 
     export let backgroundClass = "flowers"
     let sig1, sig2, sig3, sig4
     q1Complete.subscribe(isComplete => { sig2 = isComplete })
     q2Complete.subscribe(isComplete => { sig3 = isComplete })
     q3Complete.subscribe(isComplete => { sig4 = isComplete })
-    hatchStage.subscribe(stage => { sig1 = (stage == 4) })
+    hatchStage.subscribe(stage => { sig1 = (stage == 4) })*/
 
     function changeActive(){
         document.querySelector(".navActive").classList.remove("navActive")
@@ -16,7 +43,7 @@
     }
 </script>
 
-<template>
+<!-- <template>
     <div id="header" class="shadowBox {backgroundClass}">
         <div class="titleSet">
             <div id="logo">
@@ -48,6 +75,13 @@
             Winnipeg Brrr it's cold today
         </div>
     </div>
+</template> -->
+
+<template>
+    <a href="#/">Home</a> |
+    <a href="#/about">About</a> |
+    <a href="#/non-existent-path">Broken Link</a>
+    <component :is="currentView" />
 </template>
 
 <style scoped>
