@@ -1,5 +1,6 @@
 //import { hatchStage, q1Complete, q2Complete, q3Complete, q4Complete } from "../stores"
 import eggImg from "../public/egg0.png"
+import { hatchStage } from "../stores"
 
 export default function Index() {
     // Calculate how close our egg is to hatching!
@@ -42,7 +43,7 @@ export default function Index() {
     return (
         <div id="homePage" className="appPage">
             <div id="theEgg" on:click={breakEgg} on:keypress={breakEgg}>
-                <img src={eggImg} className={"egg0"} alt="Egg is on hatch stage 0" style={{height: "100%", width:"100%"}} />
+                <img src={eggImg} className={"egg" + hatchStage} alt={"Egg is on hatch stage " + hatchStage} style={{height: "100%", width:"100%"}} />
             </div>
             {message}
         </div>

@@ -1,9 +1,9 @@
-import { useEffect } from "react"
 import Signal from "./Signal" 
 import eggImg from "../public/egg0.png"
 //import { hatchStage, q1Complete, q2Complete, q3Complete } from "../stores"
 
-export default function Header( { backgroundClass = "flowers" } ) {
+export default function Header({ backgroundClass = "flowers" }) {
+    let hatchStage = 0
     let sig1, sig2, sig3, sig4
     /*onMount(() => { 
         q1Complete.subscribe(isComplete => { sig2 = isComplete })
@@ -20,26 +20,26 @@ export default function Header( { backgroundClass = "flowers" } ) {
         <div id="header" className={"shadowBox {backgroundClass}"}>
             <div className="titleSet">
                 <div id="logo">
-                    <img src={eggImg} className={"egg" + $hatchStage} alt="Egg is on hatch stage {$hatchStage}" style="height:100%;width:100%;" />
+                    <img src={eggImg} className={"egg" + hatchStage} alt={`Egg is on hatch stage ${hatchStage}`} style={{ height:"100%", width:"100%" }} />
                 </div>
                 <h1 id="title">
                     FreeTheEgg
                 </h1>
             </div>
             <div id="navs">
-                <a id="homeNav" className="navActive" href="/" on:click={changeActive}>
+                <a id="homeNav" className="navActive" href="/" onClick={changeActive}>
                     <Signal on={sig1} />
                     EGG
                 </a>
-                <a id="mathNav" href="/math" on:click={changeActive}>
+                <a id="mathNav" href="/math" onClick={changeActive}>
                     <Signal on={sig2} />
                     MATH
                 </a>
-                <a id="artistNav" href="/artist" on:click={changeActive}>
+                <a id="artistNav" href="/artist" onClick={changeActive}>
                     <Signal on={sig3} />
                     ARTIST
                 </a>
-                <a id="unboxNav" href="/unbox" on:click={changeActive}>
+                <a id="unboxNav" href="/unbox" onClick={changeActive}>
                     <Signal on={sig4} />
                     UNBOX
                 </a>

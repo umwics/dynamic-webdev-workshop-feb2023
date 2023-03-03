@@ -6,21 +6,23 @@ import Artist from "./pages/Artist"
 import Math from "./pages/Math"
 import Unbox from "./pages/Unbox"
 
-export function App() {
-  <section id="layout">
+function App() {
+  return (
+    <section id="layout">
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Index />} />
-          <Route path="math" element={<Math />} />
-          <Route path="artist" element={<Artist />} />
-          <Route path="unbox" element={<Unbox />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </section>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Index />} />
+            <Route path="math" element={<Math />} />
+            <Route path="artist" element={<Artist />} />
+            <Route path="unbox" element={<Unbox />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </section>
+  )
 }
 
-// export default App
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App />)
+export default App
+// const root = ReactDOM.createRoot(document.getElementById('root'))
+// root.render(<App />)
