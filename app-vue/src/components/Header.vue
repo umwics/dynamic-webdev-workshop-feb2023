@@ -1,4 +1,4 @@
-<script>
+<script setup>
     import Signal from "./Signal.vue" 
     import eggImg from "../public/egg0.png"
     import { computed } from "vue"
@@ -33,8 +33,10 @@
     })
 
     function changeActive(){
-        document.querySelector(".navActive").classList.remove("navActive")
-        this.classList.add("navActive")
+        /*let activeNav = document.querySelector(".navActive")
+        console.log(activeNav)
+        activeNav.classList.remove("navActive")
+        this.classList.add("navActive")*/
     }
 </script>
 
@@ -42,7 +44,7 @@
     <div id="header" :class="'shadowBox ' + props.backgroundClass">
         <div class="titleSet">
             <div id="logo">
-                <img :src="eggImg" :class="'egg' + hatchStage.value" :alt="'Egg is on hatch stage ' + hatchStage.value" :style="'height:100%;width:100%;'">
+                <img :src="eggImg" :class="'egg' + hatchStage" :alt="'Egg is on hatch stage ' + hatchStage.value" :style="'height:100%;width:100%;'">
             </div>
             <h1 id="title">
                 FreeTheEgg

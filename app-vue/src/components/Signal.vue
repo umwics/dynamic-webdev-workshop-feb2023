@@ -7,7 +7,7 @@
     // Store ref for currSignal?
     // Reloads at (on != currSignal)
     const signalClass = computed(() => {
-        if(on)
+        if(props.on)
             return "on"
         return "off"
     })

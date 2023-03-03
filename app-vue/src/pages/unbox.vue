@@ -1,12 +1,13 @@
 <script setup>
     import Box from "../components/Box.vue"
     import Guide from "../components/Box.vue"
+    import { onMounted } from "vue"
     import { useStore } from "../stores"
     const store = useStore()
     const { setQ3 } = store
 
     // Check if there's something inside the Box
-    onMount(() => { 
+    onMounted(() => { 
 		let box = document.getElementById("box")
         if(box.innerHTML.length > 0){
             console.log("There's something in the box!")

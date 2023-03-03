@@ -1,6 +1,8 @@
-<div id="box" class="shiny">
-    <slot />
-</div>
+<template>
+    <div id="box" class="shiny">
+        <slot />
+    </div>
+</template>
 
 <style scoped>
     #box{

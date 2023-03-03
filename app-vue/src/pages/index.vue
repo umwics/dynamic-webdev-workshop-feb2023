@@ -4,7 +4,7 @@
     import { storeToRefs } from "pinia"
     import { useStore } from "../stores"
     const store = useStore()
-    const { setHatchStage } = store()
+    const { setHatchStage } = store
     const { q1Complete, q2Complete, q3Complete, q4Complete, hatchStage } = storeToRefs(store)
 
     // Calculate how close our egg is to hatching!

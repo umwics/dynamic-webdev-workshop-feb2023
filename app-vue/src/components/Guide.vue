@@ -37,5 +37,4 @@
         margin: 0.5em 0 3em 0;
     }
 
-    .done
 </style>

@@ -7,8 +7,8 @@
 
     const props = defineProps({ 
         title: {type: String, required: false, default: ""},
-        colors: {type: String, required: false, default: []},
-        patterns: {type: String, required: false, default: []}
+        colors: {type: Array, required: false, default: []},
+        patterns: {type: Array, required: false, default: []}
     })
 
     function update(){
