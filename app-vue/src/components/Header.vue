@@ -12,22 +12,22 @@
     })
 
     const sig1 = computed(() => {
-        if(hatchStage == 4)
+        if(hatchStage.value == 4)
             return true
         return false
     })
     const sig2 = computed(() => {
-        if(q1Complete)
+        if(q1Complete.value)
             return true
         return false
     })
     const sig3 = computed(() => {
-        if(q2Complete)
+        if(q2Complete.value)
             return true
         return false
     })
     const sig4 = computed(() => {
-        if(q3Complete)
+        if(q3Complete.value)
             return true
         return false
     })

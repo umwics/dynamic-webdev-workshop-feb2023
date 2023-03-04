@@ -10,16 +10,16 @@
     // Calculate how close our egg is to hatching!
     function breakEgg(){
         let progress = 0
-        if(q1Complete){ progress++ }
-        if(q2Complete){ progress++ }
-        if(q3Complete){ progress+=2 }
-        if(q4Complete){ progress++ } // Skip 4th quest for now, out of time :P
+        if(q1Complete.value){ progress++ }
+        if(q2Complete.value){ progress++ }
+        if(q3Complete.value){ progress+=2 }
+        if(q4Complete.value){ progress++ } // Skip 4th quest for now, out of time :P
         setHatchStage(progress)
     }
 
     const message = computed(() => {
         let mssg = ""
-        switch(hatchStage) {
+        switch(hatchStage.value) {
         case 0:
             mssg = "The egg didn't budge. Go on an adventure until you are strong enough to break the egg!"
             break;

@@ -38,7 +38,10 @@ export const useStore = defineStore('store', () => {
 
     // String: Body color of page
     const bgColor = ref("whitesmoke")
-    function setBgColor(color){ bgColor.value = color }
+    function setBgColor(color){ 
+        bgColor.value = color
+        document.body.style.background = color
+    }
 
     // String: Header class
     const headerClass = ref("pinkcrystal")

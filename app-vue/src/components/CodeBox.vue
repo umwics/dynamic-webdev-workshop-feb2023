@@ -6,10 +6,10 @@
     const { bgColor, headerClass } = storeToRefs(store)
     
     const headerCode = computed(() => {
-        return `<Header backgroundClass="${headerClass}" />`
+        return `<Header backgroundClass="${headerClass.value}" />`
     })
     const bodyCode = computed(() => {
-        return `document.body.styles="${bgColor}"`
+        return `document.body.styles="${bgColor.value}"`
     })
     
 </script>

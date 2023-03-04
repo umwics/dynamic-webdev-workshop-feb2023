@@ -18,7 +18,7 @@
 	--black: #111313;
 	--smoothsilver: linear-gradient(40deg, #F4F4F4, #EFEFEF, #EBEFEB, #F1F2F2, #F3F3F3);
 	--sage: #B9C8DA;
-	--background: beige;
+	--background: whitesmoke;
 }
 
 html, body {
@@ -206,9 +206,6 @@ a:visited {
 }
 #palettes{
 	display: flex;
-}
-#mathWorkspace{
-	background: beige;
 }
 #problems, #scores{
 	display: flex;

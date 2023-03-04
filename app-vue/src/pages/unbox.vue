@@ -22,7 +22,7 @@
 <template>
     <div id="unboxWorkspace" class="appPage">
         <Guide instructions="Put anything inside the box (hint: you must edit the code for this page)">
-            Lesson description
+            You can put something inside something an easy way while maintain how they both look!
         </Guide>
         <Box>
             <!-- Put something inside -->

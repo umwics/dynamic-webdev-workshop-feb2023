@@ -11,22 +11,22 @@
         patterns: {type: Array, required: false, default: []}
     })
 
-    function update(){
-        if(title == "Header"){ setHeaderClass(this.innerText) }
-        if(title == "Body"){ setBgColor(this.innerText) }
+    function update(event){
+        if(props.title == "Header"){ setHeaderClass(event.target.innerText) }
+        if(props.title == "Body"){ setBgColor(event.target.innerText) }
 
-        if(headerClass != "pinkcrystal" && bgColor != "whitesmoke"){ setQ2(true) }
+        if(headerClass.value != "pinkcrystal" && bgColor.value != "whitesmoke"){ setQ2(true) }
     }
 </script>
 
 <template>
     <div class="palette">
-        <h2> {title} Palette </h2>
+        <h2> {{title}} Palette </h2>
         <div class="swatches">
-            <button v-for="color in colors" :style="`background:${color};`" @click="update">
+            <button v-for="color in colors" :style="`background:${color};`" @click="update($event)">
                 {{color}}
             </button>
-            <button v-for="pattern in patterns" :class="'swatch ' + pattern" @click="update">
+            <button v-for="pattern in patterns" :class="'swatch ' + pattern" @click="update($event)">
                 {{pattern}}
             </button>
         </div>

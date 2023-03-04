@@ -1,13 +1,15 @@
 <script setup>
     import Header from "../components/Header.vue"
     import Footer from "../components/Footer.vue"
-    
-    //bgColor.subscribe(color => { document.body.style.background = color })
+    import { storeToRefs } from "pinia"
+    import { useStore } from "../stores"
+    const store = useStore()
+    const { headerClass } = storeToRefs(store)
 </script>
 
 <template>
     <section id="layout">
-        <Header backgroundClass="flowers" />
+        <Header :backgroundClass="headerClass" />
             <router-view></router-view>
         <Footer />
     </section>
