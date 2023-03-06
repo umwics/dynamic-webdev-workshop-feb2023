@@ -1,13 +1,21 @@
+![FreeTheEgg banner](/banner.png)
+
+
 ## Dynamic JS Frameworks Demo
 
 An intro to dynamic frameworks such as React, Vue, Svelte that make modern web applications. 
 
-Learn the basics of NodeJS, reactive states, components, and state management with live samples in this Github repository!
+Learn the basics of NodeJS, reactive states, components, and state management with live samples in this Github repository.
 
 
 ### Demo app
 
 Live site coming soon!
+
+
+### Presentation
+
+[Download ppt](https://github.com/andreaabellera/FreeTheEgg/blob/main/WebDev_WICS_Feb_2023.pptx)
 
 
 ### One webapp, built 3 ways!
@@ -46,4 +54,9 @@ Explore the framework-specific source codes
 4. Run the app!  
     ```
     $ npm run dev
+    ```  
+
+5. Open any browser and enter this url address. This is where your machine hosts the app
+    ```
+    http://localhost:5173/
     ```  
