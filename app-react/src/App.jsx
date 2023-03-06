@@ -1,26 +1,8 @@
-import ReactDOM from "react-dom/client"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+//import ReactDOM from "react-dom/client"
 import Layout from "./pages/Layout"
-import Index from "./pages/Index"
-import Artist from "./pages/Artist"
-import Math from "./pages/Math"
-import Unbox from "./pages/Unbox"
 
 function App() {
-  return (
-    <section id="layout">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Index />} />
-            <Route path="math" element={<Math />} />
-            <Route path="artist" element={<Artist />} />
-            <Route path="unbox" element={<Unbox />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </section>
-  )
+  return <Layout />
 }
 
 export default App

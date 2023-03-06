@@ -9,7 +9,7 @@ export default function Artist() {
                 Lesson description
             </Guide>
             <div id="paletteView">
-                <div id="palettes" style={{ display: flex }}>
+                <div id="palettes" style={{ display: "flex" }}>
                     <Palette title="Header" patterns={["pinkcrystal","slateleaves","goldswirls","flowers"]} />
                     <Palette title="Body" colors={["lightcyan","beige","whitesmoke","lightgrey"]} />
                 </div>

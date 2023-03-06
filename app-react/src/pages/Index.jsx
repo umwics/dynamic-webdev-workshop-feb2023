@@ -4,6 +4,11 @@ import { hatchStage } from "../stores"
 
 export default function Index() {
     // Calculate how close our egg is to hatching!
+    function breakEgg(){
+
+    }
+
+    let message = ""
     /*function breakEgg(){
         let progress = 0
         if($q1Complete){ progress++ }
@@ -42,7 +47,7 @@ export default function Index() {
     )*/
     return (
         <div id="homePage" className="appPage">
-            <div id="theEgg" on:click={breakEgg} on:keypress={breakEgg}>
+            <div id="theEgg" onClick={breakEgg} onKeyDown={breakEgg}>
                 <img src={eggImg} className={"egg" + hatchStage} alt={"Egg is on hatch stage " + hatchStage} style={{height: "100%", width:"100%"}} />
             </div>
             {message}

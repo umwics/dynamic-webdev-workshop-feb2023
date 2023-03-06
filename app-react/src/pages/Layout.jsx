@@ -1,5 +1,10 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Index from "./Index"
+import Artist from "./Artist"
+import Math from "./Math"
+import Unbox from "./Unbox"
 //import { bgColor, headerClass } from "../stores"
 
 export default function Layout() {
@@ -8,18 +13,15 @@ export default function Layout() {
     return (
         <section id="layout">
             <Header backgroundClass="flowers" />
-            <slot />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Index />} />
+                    <Route path="math" element={<Math />} />
+                    <Route path="artist" element={<Artist />} />
+                    <Route path="unbox" element={<Unbox />} />
+                </Routes>
+            </BrowserRouter>
             <Footer />
         </section>
     )
 }
-
-
-
-{/* <style>
-    #layout{
-        height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-</style> */}

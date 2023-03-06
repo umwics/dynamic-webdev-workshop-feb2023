@@ -3,16 +3,17 @@ import Guide from "../components/Guide"
 
 export default function Math() {
     // Calculate score
-    /*let goal = 5
+    let goal = 5
     let correct = 0
     let wrong = 0
-    
+    let score = 0
+    /*
     $: score = correct - wrong
     
     $: if(score >= goal){
         console.log("Congratulations! You've reached your training goal")
         q1Complete.set(true)
-    }
+    }*/
     
     function reset(){ 
         correct = 0
@@ -22,13 +23,13 @@ export default function Math() {
     // Generate math equations
     let currEq = {}
     function makeNewEquation(){
-        let newEq = {
+        /*let newEq = {
             // Gets a range of whole numbers: Math.random() * (max - min) + min;
             oper1: getRandomInt(10,90),
             oper2: getRandomInt(0,10)
         }
         newEq.total = newEq.oper1 + newEq.oper2
-        currEq = newEq
+        currEq = newEq*/
     }
 
     function getRandomInt(min, max) {
@@ -53,7 +54,7 @@ export default function Math() {
 		event.stopImmediatePropagation()
     }
 
-    makeNewEquation()*/
+    makeNewEquation()
 
     return (
         <div id="mathWorkspace" className="appPage">
@@ -65,9 +66,9 @@ export default function Math() {
                     Score: {score}
                     Correct: {correct}
                     Wrong: {wrong}
-                    <button on:click={reset}>Reset Score</button>
+                    <button onClick={reset}>Reset Score</button>
                 </div>
-                {currEq.oper1} + {currEq.oper2} = <input id="answer" on:keydown={checkAnswerKP} on:blur={checkAnswer} />
+                {currEq.oper1} + {currEq.oper2} = <input id="answer" onKeyDown={checkAnswerKP} onBlur={checkAnswer} />
             </div>
         </div>
     )
