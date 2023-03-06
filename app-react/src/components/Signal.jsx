@@ -1,36 +1,16 @@
-export default function Signal({on = false}) {
+import { useMemo } from "react"
 
-    let currSignal = on
-    let signalClass = "off"
+export default function Signal({ on = false }) {
 
-    $: if (on != currSignal){
-        if(on) {signalClass = "on"}
-        else {signalClass = "off"}
-    }
+    const signalClass = useMemo(() => {
+        if(on)
+            return "on"
+        return "off"
+    })
 
     return (
-        <div className="signal {signalClass}">
+        <div className={"signal " + signalClass}>
             {on}
         </div>
     )
 }
-
-
-
-{/* <style>
-    .signal{
-        width: 2em;
-        height: 2em;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    .off{
-        color: var(--red);
-        background: var(--red);
-    }
-    .on{
-        color: mediumseagreen;
-        background: mediumseagreen;
-    }
-</style> */}

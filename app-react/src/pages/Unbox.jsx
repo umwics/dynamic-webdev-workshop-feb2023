@@ -1,27 +1,28 @@
 import { useEffect } from "react"
-//import { q3Complete } from "../stores"
+import { useRecoilState } from "recoil"
+import { setQ3 } from "../stores"
 import Box from "../components/Box"
 import Guide from "../components/Guide"
 
 export default function Unbox() {
+
+    const [q3, setQ3Complete] = useRecoilState(setQ3)
+
     // Check if there's something inside the Box
-    /*onMount(() => { 
-		let box = document.getElementById("box")
+    useEffect(() => {
+        let box = document.getElementById("box")
         if(box.innerHTML.length > 0){
             console.log("There's something in the box!")
-            q3Complete.set(true)
-            done = true
+            setQ3Complete(true)
         } 
-        else { 
-            q3Complete.set(false)
-            done = false 
-        }
-	})*/
+        else
+            setQ3Complete(false)
+    })
     
     return (
         <div id="unboxWorkspace" className="appPage">
             <Guide instructions="Put anything inside the box (hint: you must edit the code for this page)">
-                Lesson description
+                You can put something inside something an easy way while maintain how they both look!
             </Guide>
             <Box>
                 {/* Put something inside */}

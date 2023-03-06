@@ -1,21 +1,25 @@
 import Signal from "./Signal" 
 import eggImg from "../public/egg0.png"
-//import { hatchStage, q1Complete, q2Complete, q3Complete } from "../stores"
+import { useMemo } from "react"
+import { useRecoilValue } from "recoil"
+import { setHatchStage, setQ1, setQ2, setQ3 } from "../stores"
 
 export default function Header({ backgroundClass = "flowers" }) {
-    let hatchStage = 0
-    let sig1, sig2, sig3, sig4
-    /*onMount(() => { 
-        q1Complete.subscribe(isComplete => { sig2 = isComplete })
-        q2Complete.subscribe(isComplete => { sig3 = isComplete })
-        q3Complete.subscribe(isComplete => { sig4 = isComplete })
-        hatchStage.subscribe(stage => { sig1 = (stage == 4) })
-    })*/
+    const q1Complete = useRecoilValue(setQ1)
+    const q2Complete = useRecoilValue(setQ2)
+    const q3Complete = useRecoilValue(setQ3)
+    const hatchStage = useRecoilValue(setHatchStage)
 
-    function changeActive(){
+    const sig1 = useMemo(() => { return hatchStage == 4 })
+    const sig2 = useMemo(() => { return q1Complete })
+    const sig3 = useMemo(() => { return q2Complete })
+    const sig4 = useMemo(() => { return q3Complete })
+
+    function changeActive(event){
         document.querySelector(".navActive").classList.remove("navActive")
-        this.classList.add("navActive")
+        event.target.classList.add("navActive")
     }
+
     return (
         <div id="header" className={"shadowBox " + backgroundClass}>
             <div className="titleSet">

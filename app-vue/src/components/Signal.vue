@@ -4,8 +4,6 @@
         on: {type: Boolean, required: false, default: false},
     })
 
-    // Store ref for currSignal?
-    // Reloads at (on != currSignal)
     const signalClass = computed(() => {
         if(props.on)
             return "on"
