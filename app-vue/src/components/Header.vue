@@ -31,13 +31,6 @@
             return true
         return false
     })
-
-    function changeActive(){
-        /*let activeNav = document.querySelector(".navActive")
-        console.log(activeNav)
-        activeNav.classList.remove("navActive")
-        this.classList.add("navActive")*/
-    }
 </script>
 
 <template>
@@ -55,25 +48,25 @@
         <div id="navs">
 
             <router-link to="/">
-                <div id="homeNav" class="navActive" @click="changeActive">
+                <div id="homeNav">
                     <Signal :on="sig1" />
                     EGG
                 </div>
             </router-link>
             <router-link to="/math">
-                <div id="mathNav" @click="changeActive">
+                <div id="mathNav">
                     <Signal :on="sig2" />
                     MATH
                 </div>
             </router-link>
             <router-link to="/artist">
-                <div id="artistNav" @click="changeActive">
+                <div id="artistNav">
                     <Signal :on="sig3" />
                     ARTIST
                 </div>
             </router-link>
             <router-link to="/unbox">
-                <div id="unboxNav" @click="changeActive">
+                <div id="unboxNav">
                     <Signal :on="sig4" />
                     UNBOX
                 </div>

@@ -294,9 +294,6 @@ a:visited {
 	grid-column-gap: 3%;
 	font-weight: 800;
 }
-.navActive{
-	text-decoration: underline;
-}
 .palette{
 	background: #F6B4C4;
 	padding: 2em;

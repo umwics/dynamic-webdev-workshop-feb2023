@@ -16,11 +16,6 @@ export default function Header({ backgroundClass = "flowers" }) {
     const sig3 = useMemo(() => { return q2Complete })
     const sig4 = useMemo(() => { return q3Complete })
 
-    function changeActive(event){
-        document.querySelector(".navActive").classList.remove("navActive")
-        event.target.classList.add("navActive")
-    }
-
     return (
         <div id="header" className={"shadowBox " + backgroundClass}>
             <div className="titleSet">
@@ -32,25 +27,22 @@ export default function Header({ backgroundClass = "flowers" }) {
                 </h1>
             </div>
             <div id="navs">
-                <Link to="/" id="homeNav" className="navActive" onClick={changeActive}>
+                <Link to="/" id="homeNav">
                     <Signal on={sig1} />
                     EGG
                 </Link>
-                <Link to="/math" id="mathNav" onClick={changeActive}>
+                <Link to="/math" id="mathNav">
                     <Signal on={sig2} />
                     MATH
                 </Link>
-                <Link to="/artist" id="artistNav" onClick={changeActive}>
+                <Link to="/artist" id="artistNav">
                     <Signal on={sig3} />
                     ARTIST
                 </Link>
-                <Link to="/unbox" id="unboxNav" onClick={changeActive}>
+                <Link to="/unbox" id="unboxNav">
                     <Signal on={sig4} />
                     UNBOX
                 </Link>
-            </div>
-            <div id="cityTag" className="city">
-                Winnipeg Brrr it's cold today
             </div>
         </div>
     )

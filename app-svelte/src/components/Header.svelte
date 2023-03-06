@@ -12,11 +12,6 @@
         q3Complete.subscribe(isComplete => { sig4 = isComplete })
         hatchStage.subscribe(stage => { sig1 = (stage == 4) })
     })
-
-    function changeActive(){
-        document.querySelector(".navActive").classList.remove("navActive")
-        this.classList.add("navActive")
-    }
 </script>
 
 <div id="header" class="shadowBox {backgroundClass}">
@@ -29,19 +24,19 @@
         </h1>
     </div>
     <div id="navs">
-        <a id="homeNav" class="navActive" href="/" on:click={changeActive}>
+        <a id="homeNav" href="/">
             <Signal on={sig1} />
             EGG
         </a>
-        <a id="mathNav" href="/math" on:click={changeActive}>
+        <a id="mathNav" href="/math">
             <Signal on={sig2} />
             MATH
         </a>
-        <a id="artistNav" href="/artist" on:click={changeActive}>
+        <a id="artistNav" href="/artist">
             <Signal on={sig3} />
             ARTIST
         </a>
-        <a id="unboxNav" href="/unbox" on:click={changeActive}>
+        <a id="unboxNav" href="/unbox">
             <Signal on={sig4} />
             UNBOX
         </a>

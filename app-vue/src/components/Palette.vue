@@ -23,7 +23,7 @@
     <div class="palette">
         <h2> {{title}} Palette </h2>
         <div class="swatches">
-            <button v-for="color in colors" :style="`background:${color};`" @click="update($event)">
+            <button v-for="color in colors" class="swatch" :style="`background:${color};`" @click="update($event)">
                 {{color}}
             </button>
             <button v-for="pattern in patterns" :class="'swatch ' + pattern" @click="update($event)">
