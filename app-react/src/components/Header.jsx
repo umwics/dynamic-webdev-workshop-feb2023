@@ -17,7 +17,7 @@ export default function Header({ backgroundClass = "flowers" }) {
         this.classList.add("navActive")
     }
     return (
-        <div id="header" className={"shadowBox {backgroundClass}"}>
+        <div id="header" className={"shadowBox " + backgroundClass}>
             <div className="titleSet">
                 <div id="logo">
                     <img src={eggImg} className={"egg" + hatchStage} alt={`Egg is on hatch stage ${hatchStage}`} style={{ height:"100%", width:"100%" }} />

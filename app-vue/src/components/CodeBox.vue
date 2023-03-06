@@ -9,7 +9,7 @@
         return `<Header backgroundClass="${headerClass.value}" />`
     })
     const bodyCode = computed(() => {
-        return `document.body.styles="${bgColor.value}"`
+        return `document.body.style="${bgColor.value}"`
     })
     
 </script>

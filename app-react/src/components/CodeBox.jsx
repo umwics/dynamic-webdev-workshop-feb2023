@@ -1,14 +1,14 @@
-//import { bgColor, headerClass } from "../stores"
+import { useMemo } from "react"
+import { useRecoilValue } from "recoil"
+import { setBgColor, setHeaderClass } from "../stores"
 
 export default function CodeBox() {
 
-    let bodyCode, headerCode
-    /*headerClass.subscribe(hClass => {
-        headerCode = `<Header backgroundclassName="${hClass}" />`
-    })
-    bgColor.subscribe(bCol => {
-        bodyCode = `document.body.styles="${bCol}"`
-    })*/
+    const headerClass = useRecoilValue(setHeaderClass)
+    const bgColor = useRecoilValue(setBgColor)
+
+    const headerCode = useMemo(() => { return `<Header backgroundClass="${headerClass}" />` })
+    const bodyCode = useMemo(() => { return `document.body.style="${bgColor}"` })
 
     return (
         <div id="codebox">

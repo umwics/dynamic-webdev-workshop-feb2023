@@ -6,7 +6,7 @@
         headerCode = `<Header backgroundClass="${hClass}" />`
     })
     bgColor.subscribe(bCol => {
-        bodyCode = `document.body.styles="${bCol}"`
+        bodyCode = `document.body.style="${bCol}"`
     })
     
 </script>

@@ -1,17 +1,26 @@
-//import { bgColor, headerClass, q2Complete } from "../stores"
-import "../global.css"
+import { useRecoilState } from "recoil"
+import { setBgColor, setHeaderClass, setQ2 } from "../stores"
 
 export default function Palette({
-    title = "",
-    colors = [],
-    patterns = []
+        title = "",
+        colors = [],
+        patterns = []
     }){
 
-    function update(){
-        //if(title == "Header"){ headerClass.set(this.innerText) }
-        //if(title == "Body"){ bgColor.set(this.innerText) }
+    const [headerClass, setHeader] = useRecoilState(setHeaderClass)
+    const [bgColor, setBackground] = useRecoilState(setBgColor)
+    const [q2, setQ2Complete] = useRecoilState(setQ2)
 
-        //if($headerClass != "pinkcrystal" && $bgColor != "whitesmoke"){ q2Complete.set(true) }
+    function update(event){
+        if(title == "Header"){ 
+            setHeader(event.target.innerText)
+            // Check event value as state update is delayed in React till next render
+            if(event.target.innerText != "pinkcrystal" && bgColor != "whitesmoke"){ setQ2Complete(true) }
+        }
+        if(title == "Body"){ 
+            setBackground(event.target.innerText) 
+            if(headerClass != "pinkcrystal" && event.target.innerText != "whitesmoke"){ setQ2Complete(true) }
+        }
     }
     
     return (
@@ -24,7 +33,7 @@ export default function Palette({
                     </button>
                 ))}
                 {patterns.map((pattern) => (
-                    <button key={pattern} className={"swatch " + {pattern}} onClick={update}>
+                    <button key={pattern} className={"swatch " + pattern} onClick={update}>
                         {pattern}
                     </button>
                 ))}

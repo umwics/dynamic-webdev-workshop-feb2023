@@ -5,14 +5,19 @@ import Index from "./Index"
 import Artist from "./Artist"
 import Math from "./Math"
 import Unbox from "./Unbox"
-//import { bgColor, headerClass } from "../stores"
+import { setBgColor, setHeaderClass } from "../stores"
+import { useRecoilValue } from "recoil"
 
 export default function Layout() {
-    //document.body.style.background = bgColor
+
+    const headerClass = useRecoilValue(setHeaderClass)
+    const bgColor = useRecoilValue(setBgColor)
+
+    document.body.style.background = bgColor
     
     return (
         <section id="layout">
-            <Header backgroundClass="flowers" />
+            <Header backgroundClass={headerClass} />
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Index />} />
