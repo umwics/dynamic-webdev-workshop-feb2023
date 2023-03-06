@@ -1,5 +1,6 @@
 import Signal from "./Signal" 
 import eggImg from "../public/egg0.png"
+import { Link } from 'react-router-dom'
 import { useMemo } from "react"
 import { useRecoilValue } from "recoil"
 import { setHatchStage, setQ1, setQ2, setQ3 } from "../stores"
@@ -31,22 +32,22 @@ export default function Header({ backgroundClass = "flowers" }) {
                 </h1>
             </div>
             <div id="navs">
-                <a id="homeNav" className="navActive" href="/" onClick={changeActive}>
+                <Link to="/" id="homeNav" className="navActive" onClick={changeActive}>
                     <Signal on={sig1} />
                     EGG
-                </a>
-                <a id="mathNav" href="/math" onClick={changeActive}>
+                </Link>
+                <Link to="/math" id="mathNav" onClick={changeActive}>
                     <Signal on={sig2} />
                     MATH
-                </a>
-                <a id="artistNav" href="/artist" onClick={changeActive}>
+                </Link>
+                <Link to="/artist" id="artistNav" onClick={changeActive}>
                     <Signal on={sig3} />
                     ARTIST
-                </a>
-                <a id="unboxNav" href="/unbox" onClick={changeActive}>
+                </Link>
+                <Link to="/unbox" id="unboxNav" onClick={changeActive}>
                     <Signal on={sig4} />
                     UNBOX
-                </a>
+                </Link>
             </div>
             <div id="cityTag" className="city">
                 Winnipeg Brrr it's cold today

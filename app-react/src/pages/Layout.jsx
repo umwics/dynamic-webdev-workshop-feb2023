@@ -17,16 +17,17 @@ export default function Layout() {
     
     return (
         <section id="layout">
-            <Header backgroundClass={headerClass} />
+            
             <BrowserRouter>
+                <Header backgroundClass={headerClass} />
                 <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="math" element={<Math />} />
                     <Route path="artist" element={<Artist />} />
                     <Route path="unbox" element={<Unbox />} />
                 </Routes>
+                <Footer />
             </BrowserRouter>
-            <Footer />
         </section>
     )
 }
