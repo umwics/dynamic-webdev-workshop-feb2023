@@ -8,7 +8,7 @@
         if(title == "Header"){ headerClass.set(this.innerText) }
         if(title == "Body"){ bgColor.set(this.innerText) }
 
-        if($headerClass != "pinkcrystal" && $bgColor != "whitesmoke"){ q2Complete.set(true) }
+        if($headerClass != "pinkcrystal" && $bgColor != "lightgrey"){ q2Complete.set(true) }
     }
 </script>
 

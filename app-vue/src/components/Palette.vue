@@ -15,7 +15,7 @@
         if(props.title == "Header"){ setHeaderClass(event.target.innerText) }
         if(props.title == "Body"){ setBgColor(event.target.innerText) }
 
-        if(headerClass.value != "pinkcrystal" && bgColor.value != "whitesmoke"){ setQ2(true) }
+        if(headerClass.value != "pinkcrystal" && bgColor.value != "lightgrey"){ setQ2(true) }
     }
 </script>
 

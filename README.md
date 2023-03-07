@@ -23,7 +23,7 @@ Will you be strong enough and worthy to break the egg? 🥚
 
 #### Bonus Concept: State Management
 
-State Management (also known as stores) are the secret behind FreeTheEgg's progression mechanic! One must complete all three quests to completely break the Egg, and this is computed everytime the Egg is clicked. The app stores which quests are complete and which are not, globally. The image that the Egg returns varies from undamaged, to slightly chinked, to broken, to finished, as dependent on progression.
+State Management (also known as stores) are the secret behind FreeTheEgg's **progression mechanic**! One must complete all three quests to completely break the Egg, and this is computed everytime the Egg is clicked. The app stores which quests are complete and which are not, globally. The image that the Egg returns varies from undamaged, to slightly chinked, to broken, to finished, as dependent on progression.
 
 *Hint: You can track your progression automatically as the Header orbs turn from red to green.*
 
@@ -32,7 +32,7 @@ State Management libraries used:
 - **Vue**: [Pinia](https://pinia.vuejs.org/)
 - **Svelte**: built-in as `svelte/store`
 
-Each app has a `src/stores.js` file. You can copy the format if you wish to write your own stores in your framework of choice.
+> Each app has a `src/stores.js` file. You can copy the format if you wish to write your own stores in your framework of choice.
 
 ### Presentation
 
@@ -50,7 +50,7 @@ Explore the framework-specific source codes
 
 ### Serve a webapp
 
-1. Download or clone **Dynamic JS Frameworks Demo** to your computer  
+1. Download or clone **FreeTheEgg** to your computer  
     ```
     $ git clone https://github.com/andreaabellera/FreeTheEgg.git
     ```
@@ -77,7 +77,9 @@ Explore the framework-specific source codes
     $ npm run dev
     ```  
 
-5. Open any browser and enter this url address. This is where your machine hosts the app
+5. Open any browser and enter this url address (this is where your machine hosts the app)
     ```
     http://localhost:5173/
     ```  
+
+6. **BONUS**: Edit the source code of your framework of choice while the server is running. Watch as your site changes live!

@@ -48,8 +48,10 @@ export default function MathQuest() {
         let answer = document.getElementById("answer")
         if(parseInt(answer.value) == currEq.total)
             setCorrect(correct+1)
-        else
+        else if(answer.value.length > 0)
             setWrong(wrong+1)
+        else
+            return
         answer.value = ""
         makeNewEquation()
     }
@@ -99,13 +101,21 @@ export default function MathQuest() {
             </Guide>
             <div id="problems">
                 <div id="scores">
-                    Score: {score}
-                    Correct: {correct}
-                    Wrong: {wrong}
-                    <button onClick={reset}>Reset Score</button>
+                    <div>
+                        Score: {score}
+                    </div>
+                    <div>
+                        Correct: {correct}
+                        <br/> Wrong: {wrong}
+                        <br/> <button onClick={reset}>Reset Score</button>
+                    </div>
                 </div>
-                {currEq.oper1} + {currEq.oper2} = <input id="answer" onKeyDown={checkAnswerKP} onBlur={checkAnswer} />
+                <div id="questionSet">
+                    <div>{currEq.oper1} + {currEq.oper2} = </div>
+                    <input id="answer" onKeyDown={checkAnswerKP} onBlur={checkAnswer} />
+                </div>
             </div>
+            
         </div>
     )
 }

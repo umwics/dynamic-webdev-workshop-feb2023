@@ -46,8 +46,10 @@
         let answer = document.getElementById("answer")
         if(parseInt(answer.value) == currEq.total)
             correct.value++
-        else
+        else if(answer.value.length > 0)
             wrong.value++
+        else
+            return
         answer.value = ""
         makeNewEquation()
     }
@@ -102,12 +104,19 @@
         </Guide>
         <div id="problems">
             <div id="scores">
-                Score: {{score}}
-                Correct: {{correct}}
-                Wrong: {{wrong}}
-                <button @onClick="reset()">Reset Score</button>
+                <div>
+                    Score: {{score}}
+                </div>
+                <div>
+                    Correct: {{correct}}
+                    <br> Wrong: {{wrong}}
+                    <br> <button @onClick="reset()">Reset Score</button>
+                </div>
             </div>
-            {{currEq.oper1}} + {{currEq.oper2}} = <input id="answer" @keydown="checkAnswerKP" @blur="checkAnswer">
+            <div id="questionSet">
+                <div>{{currEq.oper1}} + {{currEq.oper2}} = </div>
+                <input id="answer" @keydown="checkAnswerKP" @blur="checkAnswer">
+            </div>
         </div>
     </div>
 </template>

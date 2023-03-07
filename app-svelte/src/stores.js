@@ -18,6 +18,6 @@ export const correct = writable(0)
 export const wrong = writable(0)
 
 // String: Body color of page
-export const bgColor = writable("whitesmoke")
+export const bgColor = writable("lightgrey")
 // String: Header class
 export const headerClass = writable("pinkcrystal")

@@ -29,7 +29,7 @@ export default function Artist() {
             <div id="paletteView">
                 <div id="palettes" style={{ display: "flex" }}>
                     <Palette title="Header" patterns={["pinkcrystal","slateleaves","goldswirls","flowers"]} />
-                    <Palette title="Body" colors={["lightcyan","beige","whitesmoke","lightgrey"]} />
+                    <Palette title="Body" colors={["thistle","moccasin","lightgrey","lightcoral","cadetblue","mistyrose"]} />
                 </div>
                 <CodeBox />
             </div>

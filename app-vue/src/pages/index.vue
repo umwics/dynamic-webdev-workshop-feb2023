@@ -44,9 +44,11 @@
 
 <template>
     <div id="homePage" class="appPage">
-        <div id="theEgg" @click="breakEgg" @keypress="breakEgg">
-            <img :src="eggImg" :class="'egg' + hatchStage" :alt="'Egg is on hatch stage ' + hatchStage" :style="'height:100%;width:100%;'">
+        <div id="incubator">
+            <div id="theEgg" @click="breakEgg" @keypress="breakEgg">
+                <img :src="eggImg" :class="'egg' + hatchStage" :alt="'Egg is on hatch stage ' + hatchStage" :style="'height:100%;width:100%;'">
+            </div>
+            <h2> {{message}} </h2>
         </div>
-        {{message}}
     </div>
 </template>

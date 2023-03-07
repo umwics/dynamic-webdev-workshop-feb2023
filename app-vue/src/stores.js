@@ -32,7 +32,7 @@ export const useStore = defineStore('store', () => {
     function setWrong(num){ wrong.value = num }
 
     // String: Body color of page
-    const bgColor = ref("whitesmoke")
+    const bgColor = ref("lightgrey")
     function setBgColor(color){ 
         bgColor.value = color
         document.body.style.background = color

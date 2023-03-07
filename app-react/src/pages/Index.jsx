@@ -47,10 +47,12 @@ export default function Index() {
 
     return (
         <div id="homePage" className="appPage">
-            <div id="theEgg" onClick={breakEgg} onKeyDown={breakEgg}>
-                <img src={eggImg} className={"egg" + hatchStage} alt={"Egg is on hatch stage " + hatchStage} style={{height: "100%", width:"100%"}} />
+            <div id="incubator">
+                <div id="theEgg" onClick={breakEgg} onKeyDown={breakEgg}>
+                    <img src={eggImg} className={"egg" + hatchStage} alt={"Egg is on hatch stage " + hatchStage} style={{height: "100%", width:"100%"}} />
+                </div>
+                <h2> {message} </h2>
             </div>
-            {message}
         </div>
     )
 }

@@ -44,7 +44,7 @@ const setWrong = atom({
 // setBgColor: string - Background body color
 const setBgColor = atom({
     key: 'setBgColor',
-    default: 'whitesmoke',
+    default: 'lightgrey',
 })
 
 // setHeaderClass: string - Header pattern class

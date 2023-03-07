@@ -15,11 +15,11 @@ export default function Palette({
         if(title == "Header"){ 
             setHeader(event.target.innerText)
             // Check event value as state update is delayed in React till next render
-            if(event.target.innerText != "pinkcrystal" && bgColor != "whitesmoke"){ setQ2Complete(true) }
+            if(event.target.innerText != "pinkcrystal" && bgColor != "lightgrey"){ setQ2Complete(true) }
         }
         if(title == "Body"){ 
             setBackground(event.target.innerText) 
-            if(headerClass != "pinkcrystal" && event.target.innerText != "whitesmoke"){ setQ2Complete(true) }
+            if(headerClass != "pinkcrystal" && event.target.innerText != "lightgrey"){ setQ2Complete(true) }
         }
     }
     
