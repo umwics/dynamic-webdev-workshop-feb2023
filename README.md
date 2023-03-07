@@ -21,8 +21,18 @@ Each quest introduces a dynamic web concept for your framework of choice, with a
 You may click the egg whenever you feel ready, but only the egg shall know its worthy cracker.  
 Will you be strong enough and worthy to break the egg? 🥚
 
-*Hint: You can track your progression as the orbs turn from red to green.*
+#### Bonus Concept: State Management
 
+State Management (also known as stores) are the secret behind FreeTheEgg's progression mechanic! One must complete all three quests to completely break the Egg, and this is computed everytime the Egg is clicked. The app stores which quests are complete and which are not, globally. The image that the Egg returns varies from undamaged, to slightly chinked, to broken, to finished, as dependent on progression.
+
+*Hint: You can track your progression automatically as the Header orbs turn from red to green.*
+
+State Management libraries used:
+- **React**: [Recoil](https://recoiljs.org/)
+- **Vue**: [Pinia](https://pinia.vuejs.org/)
+- **Svelte**: built-in as `svelte/store`
+
+Each app has a `src/stores.js` file. You can copy the format if you wish to write your own stores in your framework of choice.
 
 ### Presentation
 

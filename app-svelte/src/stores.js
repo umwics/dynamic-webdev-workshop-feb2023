@@ -1,9 +1,3 @@
-/*
- * stores.js
- * 
- *  Store data to pass between components
- */
-
 import { writable } from 'svelte/store'
 
 // Integer: current stage of egg hatching. From fully unhatched at 0, to hatched at 3

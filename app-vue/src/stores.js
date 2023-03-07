@@ -1,8 +1,3 @@
-/*
- * stores.js
- *    Application level state management
- */
-
 import { defineStore } from "pinia"
 import { ref } from "vue"
 

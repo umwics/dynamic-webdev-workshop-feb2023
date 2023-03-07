@@ -9,8 +9,7 @@
         <div id="guideContent">
             <slot />
         </div>
-        <div id="instructions">
-            {{instructions}}
-        </div>
+        <h2> PAGE QUEST </h2>
+        <div v-html="instructions" id="instructions"/>
     </div>
 </template>

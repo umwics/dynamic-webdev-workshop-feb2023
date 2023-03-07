@@ -17,6 +17,7 @@
         setHatchStage(progress)
     }
 
+    // "Reactfully" change the message being displayed based on how the egg appears
     const message = computed(() => {
         let mssg = ""
         switch(hatchStage.value) {

@@ -61,10 +61,41 @@ export default function MathQuest() {
 
     makeNewEquation()
 
+    let lecture = `
+        If a user does something, you may want another element or variable to react to that action. It may be generating a new input box or updating the game score.
+        React handles this through declaring a <b>useRef</b> or <b>useState tuple</b>, where the left tuple is the value and the right tuple is the setter function to update its left part. A useRef or useState value is displayable as HTML by enclosing in brackets!
+        <code>
+            <br> const [correct, setCorrect] = useState(0)
+            <br> const [wrong, setWrong] = useState(0)
+            <br>
+            <br> return (
+            <br> &nbsp; &lt;p&gt; 
+            <br> &nbsp;&nbsp; Number of correct: &#123;correct&#125;
+            <br> &nbsp;&nbsp; Number of wrong: &#123;wrong&#125;
+            <br> &nbsp; &lt;/p&gt;
+            <br> )
+        </code> 
+
+        <br><br>
+        In React, a variable can update (via a function callback) when other variables change by declaring a <b>useMemo</b>.
+        For this modified Math game, we add up correct answers but there's a penalty of minus one for wrong answers. We elegantly compute and display the score this way.
+        <code>
+            <br> const score = useMemo(() => {
+            <br> &nbsp;&nbsp; correct - wrong
+            <br> })
+            <br>
+            <br> return (&lt;h2&gt; Total Score: &#123;score&#125; &lt;/h2&gt;)
+        </code> 
+
+
+        <br><br>
+        Training gains you experience. What sure fire way can make an adventurer stronger than training better? 
+        Drill the math. The Trophy chicken shall be proud.`
+
     return (
         <div id="mathWorkspace" className="appPage">
-            <Guide instructions="Try to reach a score of 5!">
-                Variables that react to change (known as <b>states</b> or <b>refs</b>) are what makes dynamic apps efficient to work with!
+            <Guide instructions="<b>Try to reach a score of 5!</b>">
+                {lecture}
             </Guide>
             <div id="problems">
                 <div id="scores">
