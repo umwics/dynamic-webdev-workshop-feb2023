@@ -42,7 +42,7 @@ Explore the framework-specific source codes
 
 1. Download or clone **Dynamic JS Frameworks Demo** to your computer  
     ```
-    $ git clone https://github.com/andreaabellera/Dynamic-JS-Frameworks-Demo.git
+    $ git clone https://github.com/andreaabellera/FreeTheEgg.git
     ```
 
 2. Go to the directory of your framework of choice  
