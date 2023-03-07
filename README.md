@@ -36,7 +36,7 @@ State Management libraries used:
 
 ### Presentation
 
-[Download ppt](https://github.com/andreaabellera/FreeTheEgg/raw/main/WebDev_WICS_Feb_2023.pptx)
+[Download ppt](https://github.com/umwics/dynamic-webdev-workshop-feb2023/raw/main/WebDev_WICS_Feb_2023.pptx)
 
 
 ### One webapp, built 3 ways!
@@ -52,7 +52,7 @@ Explore the framework-specific source codes
 
 1. Download or clone **FreeTheEgg** to your computer  
     ```
-    $ git clone https://github.com/andreaabellera/FreeTheEgg.git
+    $ git clone https://github.com/umwics/dynamic-webdev-workshop-feb2023.git
     ```
 
 2. Go to the directory of your framework of choice  
