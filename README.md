@@ -10,12 +10,23 @@ Learn the basics of NodeJS, reactive states, components, and state management wi
 
 ### Demo app
 
-Live site coming soon!
+**Free the Egg** is a game where that opens your homepage (`route: /`) to an image of an egg. Clicking the egg will attempt to crack it. But as any adventurer is, you start of weak and puny ☹️ 
+
+But venture not far, there be quests from the other pages of the site!
+Each quest introduces a dynamic web concept for your framework of choice, with an activity.
+- **Math** (`route: /math`) introduces reactive states.
+- **Artist** (`route: /artist`) introduces props.
+- **Unbox** (`route: /unbox`) introduces slots.
+
+You may click the egg whenever you feel ready, but only the egg shall know its worthy cracker.  
+Will you be strong enough and worthy to break the egg? 🥚
+
+*Hint: You can track your progression as the orbs turn from red to green.*
 
 
 ### Presentation
 
-[Download ppt](https://github.com/andreaabellera/FreeTheEgg/blob/main/WebDev_WICS_Feb_2023.pptx)
+[Download ppt](https://github.com/andreaabellera/FreeTheEgg/raw/main/WebDev_WICS_Feb_2023.pptx)
 
 
 ### One webapp, built 3 ways!

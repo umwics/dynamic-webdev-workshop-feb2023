@@ -41,7 +41,4 @@
             UNBOX
         </a>
     </div>
-    <div id="cityTag" class="city">
-        Winnipeg Brrr it's cold today
-    </div>
 </div>

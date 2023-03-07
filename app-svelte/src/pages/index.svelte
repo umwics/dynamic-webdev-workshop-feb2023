@@ -1,8 +1,3 @@
-<!-- 
-    index.svelte
-        Default homepage route '/'
--->
-
 <script>
     import { hatchStage, q1Complete, q2Complete, q3Complete, q4Complete } from "../stores"
     import eggImg from "../public/egg0.png"
@@ -17,6 +12,7 @@
         hatchStage.set(progress)
     }
 
+    // "Reactfully" change the message being displayed based on how the egg appears
     let message = ""
     $: switch($hatchStage) {
         case 0:

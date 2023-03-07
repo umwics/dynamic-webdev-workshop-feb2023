@@ -12,6 +12,9 @@
 </script>
 
 <div id="codebox">
-    <code>{headerCode}</code>
-    <code>{bodyCode}</code>
+    <h3> CODEBOX </h3>
+    <div id="codeset">
+        <code>{headerCode}</code>
+        <code>{bodyCode}</code>
+    </div>
 </div>

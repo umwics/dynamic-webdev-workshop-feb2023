@@ -73,10 +73,5 @@
             </router-link>
 
         </div>
-
-
-        <div id="cityTag" class="city">
-            Winnipeg Brrr it's cold today
-        </div>
     </div>
 </template>

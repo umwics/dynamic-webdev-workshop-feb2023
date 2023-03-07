@@ -6,7 +6,8 @@
     <div id="guideContent">
         <slot />
     </div>
+    <h2> PAGE QUEST </h2>
     <div id="instructions">
-        {instructions}
+        {@html instructions}
     </div>
 </div>
